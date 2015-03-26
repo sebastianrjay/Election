@@ -14,5 +14,5 @@ Rough architecture:
 - finishView: renders end of game, providing user feedback
 - movingObject.js: defines moving object
 - hand.js: defines hand object, controlled by player (may inherit from movingObject.js)
-- bill.js: inherits from movingobject.js
-- newspaper.js: inherits from movingobject.js
+- bill.js: inherits from movingObject.js
+- newspaper.js: inherits from movingObject.js
