@@ -4,8 +4,9 @@ Rough architecture:
 
 - resources.js: handles loading/getting of files
 - game.js: runs game
-  - globally defines framerate
   - initializes, renders and removes views in order: startView, gameView, finishView
+  - defines keystrokes
+  - globally defines constants: framerate, object counts, dimensions of canvas
   - processes user input and view states to switch between views
   - processes user input to repeatedly update gameView
 - startView.js: renders start of game, with directions
@@ -13,6 +14,6 @@ Rough architecture:
   - renders and updates all objects
 - finishView: renders end of game, providing user feedback
 - movingObject.js: defines moving object
-- hand.js: defines hand object, controlled by player (may inherit from movingObject.js)
+- player.js: defines hand object, controlled by player (may inherit from movingObject.js)
 - bill.js: inherits from movingObject.js
 - newspaper.js: inherits from movingObject.js
