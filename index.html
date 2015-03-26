@@ -22,8 +22,8 @@
         canvasEl.width = Election.DIM_X;
         canvasEl.height = Election.DIM_Y;
         var ctx = canvasEl.getContext("2d");
-        // var game = new Asteroids.Game();
-        // new Asteroids.GameView(game, ctx).start();
+        var game = new Election.Game(ctx);
+        game.start();
       })();
     </script>
   </body>
