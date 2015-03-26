@@ -4,14 +4,15 @@
   </head>
 
   <body>
-    <canvas></canvas>
+    <img src="images/white_house.jpg" class="background-img"><canvas></canvas></img>
 
+    <script type="application/javascript" src="lib/game.js"></script>
 
     <script type="application/javascript">
       (function () {
         var canvasEl = document.getElementsByTagName("canvas")[0];
-        canvasEl.width = Asteroids.Game.DIM_X;
-        canvasEl.height = Asteroids.Game.DIM_Y;
+        canvasEl.width = Election.Game.DIM_X;
+        canvasEl.height = Election.Game.DIM_Y;
         var ctx = canvasEl.getContext("2d");
         // var game = new Asteroids.Game();
         // new Asteroids.GameView(game, ctx).start();
