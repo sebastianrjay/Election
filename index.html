@@ -21,9 +21,9 @@
         var canvasEl = document.getElementsByTagName("canvas")[0];
         canvasEl.width = Election.DIM_X;
         canvasEl.height = Election.DIM_Y;
-        var ctx = canvasEl.getContext("2d");
+        ctx = canvasEl.getContext("2d");
         var game = new Election.Game(ctx);
-        game.start();
+        game.run();
       })();
     </script>
   </body>
