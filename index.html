@@ -36,7 +36,10 @@
         var imgLoadCallback = function(){
           imgsLoaded += 1;
           if(imgsLoaded === 3) {
-            var game = new Election.Game(ctx, handImg, billImg, paperImg);
+            var options = {ctx: ctx, handImg: handImg, billImg: billImg,
+              paperImg: paperImg, audioEl: audioEl
+            }
+            var game = new Election.Game(options);
             game.run();
           }
         };
