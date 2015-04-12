@@ -6,7 +6,12 @@
 
   <body>
     <audio></audio>
-    <canvas class="canvas"></canvas>
+    <div style="position: relative;">
+     <canvas id="layer1"
+       style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
+     <canvas id="layer2"
+       style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
+    </div>
 
     <script type="application/javascript" src="lib/util.js"></script>
     <script type="application/javascript" src="lib/fallingObject.js"></script>
@@ -21,23 +26,31 @@
     <script type="application/javascript">
       (function() {
         var canvasEl = document.getElementsByTagName("canvas")[0],
+            topCanvasEl = document.getElementsByTagName("canvas")[1],
             audioEl = document.getElementsByTagName("audio")[0];
         canvasEl.width = Election.DIM_X;
         canvasEl.height = Election.DIM_Y;
+        topCanvasEl.width = Election.DIM_X + 120;
+        topCanvasEl.height = Election.DIM_Y;
         var ctx = canvasEl.getContext("2d"),
+            ctxTop = topCanvasEl.getContext("2d"),
             handImg = new Image(),
             billImg = new Image(),
             paperImg = new Image(),
+            deanImg = new Image(),
             imgsLoaded = 0;
-        handImg.src = 'images/outstretched-hand.png';
+
         billImg.src = 'images/million_dollar_bill.jpg';
+        deanImg.src = 'images/howard_dean.jpg';
+        handImg.src = 'images/outstretched-hand.png';
         paperImg.src = 'images/newspaper.png';
 
         var imgLoadCallback = function(){
           imgsLoaded += 1;
-          if(imgsLoaded === 3) {
+          if(imgsLoaded === 4) {
             var options = {ctx: ctx, handImg: handImg, billImg: billImg,
-              paperImg: paperImg, audioEl: audioEl
+              paperImg: paperImg, deanImg: deanImg, audioEl: audioEl,
+                ctxTop: ctxTop
             }
             var game = new Election.Game(options);
             game.run();
@@ -45,6 +58,7 @@
         };
 
         billImg.addEventListener("load", imgLoadCallback);
+        deanImg.addEventListener("load", imgLoadCallback);
         handImg.addEventListener("load", imgLoadCallback);
         paperImg.addEventListener("load", imgLoadCallback);
       })();
