@@ -6,6 +6,8 @@
 
   <body>
     <audio></audio>
+    <audio></audio>
+
     <div style="position: relative;">
      <canvas id="layer1"
        style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
@@ -28,6 +30,7 @@
         var canvasEl = document.getElementsByTagName("canvas")[0],
             topCanvasEl = document.getElementsByTagName("canvas")[1],
             audioEl = document.getElementsByTagName("audio")[0];
+            musicEl = document.getElementsByTagName("audio")[1];
         canvasEl.width = Election.DIM_X;
         canvasEl.height = Election.DIM_Y;
         topCanvasEl.width = Election.DIM_X + 120;
@@ -50,7 +53,7 @@
           if(imgsLoaded === 4) {
             var options = {ctx: ctx, handImg: handImg, billImg: billImg,
               paperImg: paperImg, deanImg: deanImg, audioEl: audioEl,
-                ctxTop: ctxTop
+                ctxTop: ctxTop, musicEl: musicEl
             }
             var game = new Election.Game(options);
             game.run();
