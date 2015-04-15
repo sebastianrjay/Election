@@ -1,6 +1,6 @@
 # Election
 
-PLAY IT LIVE HERE: 
+PLAY IT LIVE [HERE](sebastianrjay.github.io/Election)
 
 Architecture:
 
