@@ -41,14 +41,15 @@
             billImg = new Image(),
             paperImg = new Image(),
             deanImg = new Image(),
-            imgsLoaded = 0;
+            imgsLoaded = 0,
+            images = [handImg, billImg, paperImg, deanImg];
 
         billImg.src = 'images/million_dollar_bill.jpg';
         deanImg.src = 'images/howard_dean.jpg';
         handImg.src = 'images/outstretched-hand.png';
         paperImg.src = 'images/newspaper.png';
 
-        var imgLoadCallback = function(){
+        var maybeStartGame = function(){
           imgsLoaded += 1;
           if(imgsLoaded === 4) {
             var options = {ctx: ctx, handImg: handImg, billImg: billImg,
@@ -60,10 +61,9 @@
           }
         };
 
-        billImg.addEventListener("load", imgLoadCallback);
-        deanImg.addEventListener("load", imgLoadCallback);
-        handImg.addEventListener("load", imgLoadCallback);
-        paperImg.addEventListener("load", imgLoadCallback);
+        images.forEach(function(img) {
+          img.addEventListener("load", maybeStartGame);
+        });
       })();
     </script>
   </body>
