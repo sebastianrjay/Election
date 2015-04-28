@@ -41,7 +41,8 @@
             billImg = new Image(),
             paperImg = new Image(),
             deanImg = new Image(),
-            imgsLoaded = 0;
+            imgsLoaded = 0,
+            images = [handImg, billImg, paperImg, deanImg];
 
         billImg.src = 'images/million_dollar_bill.jpg';
         deanImg.src = 'images/howard_dean.jpg';
@@ -60,10 +61,9 @@
           }
         };
 
-        billImg.addEventListener("load", maybeStartGame);
-        deanImg.addEventListener("load", maybeStartGame);
-        handImg.addEventListener("load", maybeStartGame);
-        paperImg.addEventListener("load", maybeStartGame);
+        images.forEach(function(img) {
+          img.addEventListener("load", maybeStartGame);
+        });
       })();
     </script>
   </body>
