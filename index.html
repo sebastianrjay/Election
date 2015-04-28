@@ -48,7 +48,7 @@
         handImg.src = 'images/outstretched-hand.png';
         paperImg.src = 'images/newspaper.png';
 
-        var imgLoadCallback = function(){
+        var maybeStartGame = function(){
           imgsLoaded += 1;
           if(imgsLoaded === 4) {
             var options = {ctx: ctx, handImg: handImg, billImg: billImg,
@@ -60,10 +60,10 @@
           }
         };
 
-        billImg.addEventListener("load", imgLoadCallback);
-        deanImg.addEventListener("load", imgLoadCallback);
-        handImg.addEventListener("load", imgLoadCallback);
-        paperImg.addEventListener("load", imgLoadCallback);
+        billImg.addEventListener("load", maybeStartGame);
+        deanImg.addEventListener("load", maybeStartGame);
+        handImg.addEventListener("load", maybeStartGame);
+        paperImg.addEventListener("load", maybeStartGame);
       })();
     </script>
   </body>
