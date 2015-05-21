@@ -1,10 +1,7 @@
 # Election
 
-<<<<<<< HEAD
-PLAY IT LIVE HERE: 
-=======
 PLAY IT LIVE [HERE](sebastianrjay.github.io/Election)
->>>>>>> gh-pages
+
 
 Architecture:
 
