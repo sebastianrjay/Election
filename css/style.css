@@ -1,0 +1,10 @@
+#content {
+  width: 622px;
+  padding: 0;
+  margin: auto;
+  display: block;
+}
+
+#layer1 {
+  background-image: url("../images/white_house.jpg");
+}
