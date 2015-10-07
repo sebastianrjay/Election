@@ -8,13 +8,14 @@
     <audio></audio>
     <audio></audio>
 
-    <div style="position: relative;">
+    <div id="content" style="position: relative;">
      <canvas id="layer1"
        style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
      <canvas id="layer2"
        style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
     </div>
 
+    <script type="application/javascript" src="lib/constants.js"></script>
     <script type="application/javascript" src="lib/util.js"></script>
     <script type="application/javascript" src="lib/fallingObject.js"></script>
     <script type="application/javascript" src="lib/hand.js"></script>
@@ -31,16 +32,15 @@
             topCanvasEl = document.getElementsByTagName("canvas")[1],
             audioEl = document.getElementsByTagName("audio")[0];
             musicEl = document.getElementsByTagName("audio")[1];
-        canvasEl.width = Election.DIM_X;
-        canvasEl.height = Election.DIM_Y;
-        topCanvasEl.width = Election.DIM_X + 120;
-        topCanvasEl.height = Election.DIM_Y;
+
+        [canvasEl, topCanvasEl].forEach(function(canvas) {
+          canvas.width = Election.DIM_X, canvas.height = Election.DIM_Y;
+        });
+        
         var ctx = canvasEl.getContext("2d"),
             ctxTop = topCanvasEl.getContext("2d"),
-            handImg = new Image(),
-            billImg = new Image(),
-            paperImg = new Image(),
-            deanImg = new Image(),
+            handImg = new Image(), billImg = new Image(),
+            paperImg = new Image(), deanImg = new Image(),
             imgsLoaded = 0,
             images = [handImg, billImg, paperImg, deanImg];
 
