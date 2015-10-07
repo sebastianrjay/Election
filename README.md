@@ -6,7 +6,7 @@ PLAY IT LIVE [HERE](sebastianrjay.github.io/Election)
 Architecture:
 
 - game.js: runs game
-  - initializes, renders and removes views in order: startView, gameView,               finishView
+  - initializes, renders and removes views in order: startView, gameView, finishView
   - adds and removes document event listeners to handle user input
   - runs gameplay and gameplay audio
   - updates objects
