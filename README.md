@@ -1,10 +1,15 @@
 # Election
 
+Election is an interactive browser game that parodies US elections, and features
+a soundtrack and sound effects. It uses no external JavaScript libraries,
+relying on direct DOM manipulation.
+
 PLAY IT LIVE [HERE](sebastianrjay.github.io/Election)
 
 
 Architecture:
 
+- constants.js: sets global constants, such as framerate
 - game.js: runs game
   - initializes, renders and removes views in order: startView, gameView, finishView
   - adds and removes document event listeners to handle user input
