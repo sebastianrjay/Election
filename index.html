@@ -36,7 +36,7 @@
         [canvasEl, topCanvasEl].forEach(function(canvas) {
           canvas.width = Election.DIM_X, canvas.height = Election.DIM_Y;
         });
-        
+
         var ctx = canvasEl.getContext("2d"),
             ctxTop = topCanvasEl.getContext("2d"),
             handImg = new Image(), billImg = new Image(),
@@ -57,7 +57,7 @@
                 ctxTop: ctxTop, musicEl: musicEl
             }
             var game = new Election.Game(options);
-            game.run();
+            game.start();
           }
         };
 
