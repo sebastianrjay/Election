@@ -2,7 +2,7 @@
 	position: relative;
 	height: 618px;
   width: 800px;
-  padding: 0;
+  padding: 20px 0 0 0;
   margin: auto;
   display: block;
   z-index: 0;
@@ -11,7 +11,7 @@
 canvas {
 	position: absolute;
 	left: 31px;
-	top: 32px;
+	top: 52px;
 }
 
 #layer1 {
