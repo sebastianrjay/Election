@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     uglify: {
 	    my_target: {
 	      files: {
-	        'app.js': [
+	        'app.min.js': [
 	        	'lib/constants.js',
             'lib/util.js',
             'lib/falling-object.js',
