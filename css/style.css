@@ -15,8 +15,12 @@ canvas {
 }
 
 #layer1 {
-	background-image: url("../images/white_house.jpg");
+	background-color: #000000;
 	z-index: 1;
+}
+
+#layer1.game-started {
+	background-image: url("../images/white_house.jpg");
 }
 
 #layer2 {
