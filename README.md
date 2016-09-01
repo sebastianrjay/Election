@@ -4,6 +4,7 @@ Election is an interactive browser game that parodies US elections, and features
 a soundtrack and sound effects. It uses no external JavaScript libraries,
 relying on direct DOM manipulation.
 
+
 PLAY IT LIVE [HERE](http://sebastianrjay.com/Election)
 
 
