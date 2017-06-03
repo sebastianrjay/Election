@@ -31,3 +31,11 @@ canvas {
 	max-height: 100%;
 	max-width: 100%;
 }
+
+footer {
+  text-align: center;
+}
+
+footer a, footer a:visited {
+  text-decoration: none;
+}
